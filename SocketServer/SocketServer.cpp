@@ -127,7 +127,7 @@ void ServerNet::ServerRun()
 
 	SOCKET newSocket;
 
-	char buf[10000];
+	char buf[1000000];
 
 	int rval;
 
@@ -176,12 +176,12 @@ void ServerNet::ServerRun()
 
 				memset(buf, 0, sizeof(buf));
 
-				rval = recv(newSocket, buf, 10000, 0);
+				rval = recv(newSocket, buf, 1000000, 0);
 
 				memcpy(&Sockrecv, buf, sizeof(SocketPackage));
 
 				//if (Sockrecv.Res[0] && Sockrecv.Res[2047]) {
-				printf("Sockpack.CameraNum =%d ,Sockpack.Framecnt =%d ,  Sockpack.Res[0] = %f,Sockpack.Res[2047] = %f\n", Sockrecv.CameraNum, Sockrecv.Framecnt, Sockrecv.Res[0], Sockrecv.Res[2047]);
+				printf("Sockpack.CameraNum =%s ,Sockpack.Framecnt =%d ,  Sockpack.Res[0] = %f,Sockpack.Res[2047] = %f\n", Sockrecv.SerialNumber, Sockrecv.Framecnt, Sockrecv.s[1008], Sockrecv.ay[1008]);
 				//}
 
 

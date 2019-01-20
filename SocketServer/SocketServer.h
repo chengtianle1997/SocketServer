@@ -25,9 +25,10 @@ ServerNet.h
 
 typedef struct {
 
-	int CameraNum;
+	unsigned char SerialNumber[64];
 	int Framecnt;
-	float Res[2048];
+	float s[2048];
+	float ay[2048];
 
 }SocketPackage;
 

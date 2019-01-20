@@ -20,7 +20,7 @@ ServerNet serverNet8;
 ServerNet serverNet9;
 ServerNet serverNet10;
 
-int ServerPort = 0;
+int ServerPort = 8001;
 const char* ServerAddr = "127.0.0.1";
 
 void ServerRun1()
